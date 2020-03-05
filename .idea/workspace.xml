@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b8d6eb1a-d512-4809-8d0b-b442fc4b26a9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/org/somecompany/build/MsBuild.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/somecompany/build/MsBuild.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vars/ex_msbuild.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/vars/ex_msbuild.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583421917687</updated>
-      <workItem from="1583421920916" duration="578000" />
+      <workItem from="1583421920916" duration="835000" />
     </task>
     <servers />
   </component>

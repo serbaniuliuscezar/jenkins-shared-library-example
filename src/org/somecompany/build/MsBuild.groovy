@@ -13,6 +13,8 @@ class MsBuild implements Serializable {
         this.solutionPath = solutionPath
     }
 
+    IStepExecutor steps = ContextRegistry.getContext().getStepExecutor()
+
     void build() {
         IStepExecutor steps = ContextRegistry.getContext().getStepExecutor()
 
