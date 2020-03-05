@@ -10,6 +10,7 @@ import com.cloudbees.groovy.cps.NonCPS
 class MsBuild implements Serializable {
     private String solutionPath
 
+    @NonCPS
     MsBuild(String solutionPath) {
         this.solutionPath = solutionPath
     }
