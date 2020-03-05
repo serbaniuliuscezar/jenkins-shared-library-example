@@ -6,9 +6,9 @@ import org.somecompany.ioc.ContextRegistry
  * @param solutionPath Path to .sln file
  * @return
  */
-def call(String solutionPath) {
+def call() {
     ContextRegistry.registerDefaultContext(this)
-
+    String solutionPath = 'test'
     def msbuilder = new MsBuild(solutionPath)
     msbuilder.build()
 }
