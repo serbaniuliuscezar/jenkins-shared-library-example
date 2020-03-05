@@ -13,14 +13,14 @@ import static org.mockito.Mockito.*;
  */
 public class MsBuildTest {
     private IContext _context;
-    private IStepExecutor _steps;
+    private IStepExecutor steps;
 
     @Before
     public void setup() {
         _context = mock(IContext.class);
-        _steps = mock(IStepExecutor.class);
+        steps = mock(IStepExecutor.class);
 
-        when(_context.getStepExecutor()).thenReturn(_steps);
+        when(_context.getStepExecutor()).thenReturn(steps);
 
         ContextRegistry.registerContext(_context);
     }
@@ -35,7 +35,7 @@ public class MsBuildTest {
         builder.build();
 
         // verify
-        verify(_steps).sh(anyString());
+        verify(steps).sh(anyString());
     }
 
     @Test
@@ -44,12 +44,12 @@ public class MsBuildTest {
         String solutionPath = "some/path/to.sln";
         MsBuild builder = new MsBuild(solutionPath);
 
-        when(_steps.sh(anyString())).thenReturn(-1);
+        when(steps.sh(anyString())).thenReturn(-1);
 
         // execute
         builder.build();
 
         // verify
-        verify(_steps).error(anyString());
+        verify(steps).error(anyString());
     }
 }

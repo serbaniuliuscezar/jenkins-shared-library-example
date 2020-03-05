@@ -4,14 +4,14 @@ import org.somecompany.IStepExecutor
 import org.somecompany.StepExecutor
 
 class DefaultContext implements IContext, Serializable {
-    private _steps
+    private steps
 
     DefaultContext(steps) {
-        this._steps = steps
+        this.steps = steps
     }
 
     @Override
     IStepExecutor getStepExecutor() {
-        return new StepExecutor(this._steps)
+        return new StepExecutor(this.steps)
     }
 }
